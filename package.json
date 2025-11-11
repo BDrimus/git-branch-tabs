@@ -1,8 +1,9 @@
 {
   "name": "git-branch-tabs",
-  "displayName": "git-branch-tabs",
+  "displayName": "Git Branch Tabs",
   "description": "An extension to manage open tabs based on the current Git branch.",
   "version": "0.0.1",
+  "publisher": "bence-drimus", 
   "engines": {
     "vscode": "^1.105.0"
   },
