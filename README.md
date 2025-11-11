@@ -1,71 +1,43 @@
-# git-branch-tabs README
+# Git Branch Tabs
 
-This is the README for your extension "git-branch-tabs". After writing up a brief description, we recommend including the following sections.
+A VS Code extension that automatically manages open tabs based on the current Git branch. When you switch Git branches, the extension will close all open tabs and reopen the tabs that were previously open for that branch.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Automatically saves the state of open tabs when switching Git branches
+- Closes all open tabs when a branch change is detected
+- Restores the tabs that were open for the target branch
+- Persists tab states in the workspace
+- Manual command to sync current tabs with the current branch
 
-For example if there is an image subfolder under your extension project workspace:
+## How It Works
 
-\!\[feature X\]\(images/feature-x.png\)
+1. When you switch Git branches (using VS Code's Git UI or external commands), the extension detects the branch change
+2. It saves the current open tabs for the old branch
+3. It closes all open editors
+4. It restores the tabs that were previously open for the new branch
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Commands
+
+- `Git Branch Tabs: Sync Current Tabs with Branch` - Manually save the current open tabs for the current branch
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- VS Code Git extension must be installed and enabled
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+This extension does not currently have any configurable settings.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- May not work properly with very large numbers of open files
+- Tab states are stored per workspace, so they won't transfer between different projects
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- Initial release
+- Basic functionality to save and restore tabs based on Git branch
+- Automatic detection of branch changes

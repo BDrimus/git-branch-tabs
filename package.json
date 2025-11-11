@@ -10,11 +10,17 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+    "onCommand:git-branch-tabs.syncTabs"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": []
+    "commands": [
+      {
+        "command": "git-branch-tabs.syncTabs",
+        "title": "Sync Current Tabs with Branch"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
