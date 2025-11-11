@@ -1,4 +1,4 @@
-# Git Branch Tabs
+# Git Branch Tab Sync
 
 A VS Code extension that automatically manages open tabs based on the current Git branch. When you switch Git branches, the extension will close all open tabs and reopen the tabs that were previously open for that branch.
 
@@ -19,7 +19,7 @@ A VS Code extension that automatically manages open tabs based on the current Gi
 
 ## Commands
 
-- `Git Branch Tabs: Sync Current Tabs with Branch` - Manually save the current open tabs for the current branch
+- `Git Branch Tab Sync: Sync Current Tabs with Branch` - Manually save the current open tabs for the current branch
 
 ## Requirements
 

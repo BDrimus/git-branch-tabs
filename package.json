@@ -1,6 +1,6 @@
 {
   "name": "git-branch-tabs",
-  "displayName": "Git Branch Tabs",
+  "displayName": "Git Branch Tab Sync",
   "description": "An extension to manage open tabs based on the current Git branch.",
   "version": "0.0.1",
   "publisher": "bence-drimus",
